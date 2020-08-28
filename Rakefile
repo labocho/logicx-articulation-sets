@@ -1,17 +1,33 @@
-namespace :VSL do
-  namespace :Synchron do
-    task :generate do
-      sh "ruby VSL/Synchron/src/generator.rb VSL/Synchron/src/*.yml"
+require "shellwords"
+INSTALL_DIR = "#{ENV["HOME"]}/Music/Audio Music Apps/Articulation Settings"
+
+namespace :vsl do
+  namespace :synchron do
+    task :clean do
+      rm_rf "build/vsl/synchron"
     end
 
-    task :clean do
-      sh "rm -f VSL/Synchron/*.plist"
+    task :generate do
+      sh "ruby src/vsl/synchron/generator.rb src/vsl/synchron/*.yml"
+    end
+
+    task :install do
+      dir = File.join(INSTALL_DIR, "VSL/Synchron")
+      mkdir_p dir
+      sh "cp build/vsl/synchron/*.plist #{dir.shellescape}"
     end
   end
 
-  task :generate => %w(Synchron:generate)
-  task :clean => %w(Synchron:clean)
+  task :clean do
+    rm_rf "build/vsl"
+  end
+  task generate: %w(synchron:generate)
+  task install: %w(synchron:install)
 end
 
-task clean: %w(VSL:clean)
-task default: %w(VSL:generate)
+
+task :clean do
+  rm_rf "build/*"
+end
+task default: %w(vsl:generate)
+task install: %w(vsl:install)

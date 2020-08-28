@@ -1,10 +1,10 @@
 Registers:
-  - C1
-  - C2
+  - C6
+  - C7
 Articulations:
   C:
     C: Staccato
-    C#: Detache
+    D: Detache
   C#:
     C: Sustain
     C#: Marcato (w/CC1)

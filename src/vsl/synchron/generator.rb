@@ -1,16 +1,28 @@
 require "json"
 require "yaml"
+require "fileutils"
+require "open3"
+require "tmpdir"
+
+def sh(*args)
+  o, e, s = Open3.capture3(*args)
+  unless s.success?
+    $stderr.puts e
+    exit s.to_i
+  end
+  o
+end
 
 C4 = 60
 
 class ArticulationSetGenerator
   NOTE_NAME = %w(C C# D D# E F F# G G# A A# B)
 
-  def self.parse(hash)
-    new.parse(hash)
+  def self.parse(name, hash)
+    new.parse(name, hash)
   end
 
-  def parse(hash)
+  def parse(name, hash)
     a = []
 
     articulation_register, type_register = hash["Registers"].map {|r| parse_register(r) }
@@ -46,7 +58,12 @@ class ArticulationSetGenerator
       end
     }
 
-    {Articulations: a}
+    {
+      Articulations: a,
+      MultipleOutputsActive: true,
+      Name: name,
+      Switches: [],
+    }
   end
 
   def parse_register(s)
@@ -69,8 +86,13 @@ class ArticulationSetGenerator
   end
 end
 
+DEST_DIR = "#{__dir__}/../../../build/vsl/synchron"
+FileUtils.mkdir_p DEST_DIR
+
 ARGV.each do |yaml|
   name = File.basename(yaml).gsub(File.extname(yaml), "")
-  set = ArticulationSetGenerator.parse(YAML.load_file(yaml))
-  File.write("#{__dir__}/../#{name}.plist", JSON.pretty_generate(set))
+  set = ArticulationSetGenerator.parse(name, YAML.load_file(yaml))
+  dest = "#{DEST_DIR}/#{name}.plist"
+  File.write(dest, JSON.pretty_generate(set))
+  sh "plutil", "-convert", "xml1", dest
 end

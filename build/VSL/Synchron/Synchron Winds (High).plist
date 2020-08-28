@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Articulations</key>
+	<array>
+		<dict>
+			<key>ArticulationID</key>
+			<integer>1</integer>
+			<key>ID</key>
+			<integer>1001</integer>
+			<key>Name</key>
+			<string>Staccato</string>
+			<key>Output</key>
+			<array>
+				<dict>
+					<key>MB1</key>
+					<integer>24</integer>
+					<key>Status</key>
+					<string>Note ON</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>ArticulationID</key>
+			<integer>13</integer>
+			<key>ID</key>
+			<integer>1013</integer>
+			<key>Name</key>
+			<string>Sustain</string>
+			<key>Output</key>
+			<array>
+				<dict>
+					<key>MB1</key>
+					<integer>25</integer>
+					<key>Status</key>
+					<string>Note ON</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>MB1</key>
+					<integer>36</integer>
+					<key>Status</key>
+					<string>Note On</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>ArticulationID</key>
+			<integer>14</integer>
+			<key>ID</key>
+			<integer>1014</integer>
+			<key>Name</key>
+			<string>Marcato (w/CC1)</string>
+			<key>Output</key>
+			<array>
+				<dict>
+					<key>MB1</key>
+					<integer>25</integer>
+					<key>Status</key>
+					<string>Note ON</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>MB1</key>
+					<integer>37</integer>
+					<key>Status</key>
+					<string>Note On</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>ArticulationID</key>
+			<integer>25</integer>
+			<key>ID</key>
+			<integer>1025</integer>
+			<key>Name</key>
+			<string>Legato</string>
+			<key>Output</key>
+			<array>
+				<dict>
+					<key>MB1</key>
+					<integer>26</integer>
+					<key>Status</key>
+					<string>Note ON</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>MB1</key>
+					<integer>36</integer>
+					<key>Status</key>
+					<string>Note On</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>ArticulationID</key>
+			<integer>26</integer>
+			<key>ID</key>
+			<integer>1026</integer>
+			<key>Name</key>
+			<string>Legato-sus</string>
+			<key>Output</key>
+			<array>
+				<dict>
+					<key>MB1</key>
+					<integer>26</integer>
+					<key>Status</key>
+					<string>Note ON</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>MB1</key>
+					<integer>37</integer>
+					<key>Status</key>
+					<string>Note On</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>ArticulationID</key>
+			<integer>37</integer>
+			<key>ID</key>
+			<integer>1037</integer>
+			<key>Name</key>
+			<string>Sforzato</string>
+			<key>Output</key>
+			<array>
+				<dict>
+					<key>MB1</key>
+					<integer>27</integer>
+					<key>Status</key>
+					<string>Note ON</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>ArticulationID</key>
+			<integer>49</integer>
+			<key>ID</key>
+			<integer>1049</integer>
+			<key>Name</key>
+			<string>Custom 1</string>
+			<key>Output</key>
+			<array>
+				<dict>
+					<key>MB1</key>
+					<integer>28</integer>
+					<key>Status</key>
+					<string>Note ON</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>MB1</key>
+					<integer>36</integer>
+					<key>Status</key>
+					<string>Note On</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>ArticulationID</key>
+			<integer>50</integer>
+			<key>ID</key>
+			<integer>1050</integer>
+			<key>Name</key>
+			<string>Custom 2</string>
+			<key>Output</key>
+			<array>
+				<dict>
+					<key>MB1</key>
+					<integer>28</integer>
+					<key>Status</key>
+					<string>Note ON</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>MB1</key>
+					<integer>37</integer>
+					<key>Status</key>
+					<string>Note On</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>ArticulationID</key>
+			<integer>51</integer>
+			<key>ID</key>
+			<integer>1051</integer>
+			<key>Name</key>
+			<string>Custom 3</string>
+			<key>Output</key>
+			<array>
+				<dict>
+					<key>MB1</key>
+					<integer>28</integer>
+					<key>Status</key>
+					<string>Note ON</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>MB1</key>
+					<integer>38</integer>
+					<key>Status</key>
+					<string>Note On</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>ArticulationID</key>
+			<integer>52</integer>
+			<key>ID</key>
+			<integer>1052</integer>
+			<key>Name</key>
+			<string>Custom 4</string>
+			<key>Output</key>
+			<array>
+				<dict>
+					<key>MB1</key>
+					<integer>28</integer>
+					<key>Status</key>
+					<string>Note ON</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>MB1</key>
+					<integer>39</integer>
+					<key>Status</key>
+					<string>Note On</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>MultipleOutputsActive</key>
+	<true/>
+	<key>Name</key>
+	<string>Synchron Winds (High)</string>
+	<key>Switches</key>
+	<array/>
+</dict>
+</plist>
