@@ -1,43 +1,7 @@
 require "json"
+require "yaml"
 
 C4 = 60
-INSTRUMENTS = {
-  "Strings (high)": {
-    "Registers": ["C1", "C2"],
-    "Articulations": {
-      "C": {
-        "C": "Staccato",
-        "C#": "Detache",
-      },
-      "C#": {
-        "C": "Sustain",
-        "C#": "Marcato (w/CC1)",
-        "D": "XF tremolo (w/CC20)",
-      },
-      "D": {
-        "C": "Legato",
-        "C#": "Legato-sus",
-      },
-      "D#": {
-        "C": "Sforzato",
-        "C#": "Sfz XV tremolo (w/CC20)",
-      },
-      "E": {
-        "C": "Tremolo",
-        "C#": "Trem. marcato (w/CC1)",
-      },
-      "F": {
-        nil => "Pizzicato"
-      },
-      "F#": {
-        "C": "Custom 1",
-        "C#": "Custom 2",
-        "D": "Custom 3",
-        "D#": "Custom 4",
-      },
-    },
-  },
-}
 
 class ArticulationSetGenerator
   NOTE_NAME = %w(C C# D D# E F F# G G# A A# B)
@@ -49,9 +13,9 @@ class ArticulationSetGenerator
   def parse(hash)
     a = []
 
-    articulation_register, type_register = hash[:Registers].map {|r| parse_register(r) }
+    articulation_register, type_register = hash["Registers"].map {|r| parse_register(r) }
 
-    hash[:Articulations].each {|note_a_str, types|
+    hash["Articulations"].each {|note_a_str, types|
       note_a = parse_note(note_a_str)
       types.each do |note_b_str, name|
         note_b = parse_note(note_b_str)
@@ -105,7 +69,8 @@ class ArticulationSetGenerator
   end
 end
 
-INSTRUMENTS.each do |name, hash|
-  set = ArticulationSetGenerator.parse(hash)
-  File.write("#{__dir__}/../Synchron #{name}.json", JSON.pretty_generate(set))
+ARGV.each do |yaml|
+  name = File.basename(yaml).gsub(File.extname(yaml), "")
+  set = ArticulationSetGenerator.parse(YAML.load_file(yaml))
+  File.write("#{__dir__}/../#{name}.json", JSON.pretty_generate(set))
 end

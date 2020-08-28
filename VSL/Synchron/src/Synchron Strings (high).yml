@@ -1,0 +1,27 @@
+Registers:
+  - C1
+  - C2
+Articulations:
+  C:
+    C: Staccato
+    C#: Detache
+  C#:
+    C: Sustain
+    C#: Marcato (w/CC1)
+    D: XF tremolo (w/CC20)
+  D:
+    C: Legato
+    C#: Legato-sus
+  D#:
+    C: Sforzato
+    C#: Sfz XV tremolo (w/CC20)
+  E:
+    C: Tremolo
+    C#: Trem. marcato (w/CC1)
+  F:
+    null: Pizzicato
+  F#:
+    C: Custom 1
+    C#: Custom 2
+    D: Custom 3
+    D#: Custom 4
