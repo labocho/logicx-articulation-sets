@@ -3,89 +3,109 @@ require "json"
 C4 = 60
 INSTRUMENTS = {
   "Strings (high)": {
-    "C1": {
-      "C2": "Staccato",
-      "C#2": "Detache",
+    "Registers": ["C1", "C2"],
+    "Articulations": {
+      "C": {
+        "C": "Staccato",
+        "C#": "Detache",
+      },
+      "C#": {
+        "C": "Sustain",
+        "C#": "Marcato (w/CC1)",
+        "D": "XF tremolo (w/CC20)",
+      },
+      "D": {
+        "C": "Legato",
+        "C#": "Legato-sus",
+      },
+      "D#": {
+        "C": "Sforzato",
+        "C#": "Sfz XV tremolo (w/CC20)",
+      },
+      "E": {
+        "C": "Tremolo",
+        "C#": "Trem. marcato (w/CC1)",
+      },
+      "F": {
+        nil => "Pizzicato"
+      },
+      "F#": {
+        "C": "Custom 1",
+        "C#": "Custom 2",
+        "D": "Custom 3",
+        "D#": "Custom 4",
+      },
     },
-    "C#1": {
-      "C2": "Sustain",
-      "C#2": "Marcato (w/CC1)",
-      "D2": "XF tremolo (w/CC20)",
-    },
-    "D1": {
-      "C2": "Legato",
-      "C#2": "Legato-sus",
-    },
-    "D#1": {
-      "C2": "Sforzato",
-      "C#2": "Sfz XV tremolo (w/CC20)",
-    },
-    "E1": {
-      "C2": "Tremolo",
-      "C#2": "Trem. marcato (w/CC1)",
-    },
-    "F1": {
-      nil => "Pizzicato"
-    },
-    "F#1": {
-      "C2": "Custom 1",
-      "C#2": "Custom 2",
-      "D2": "Custom 3",
-      "D#2": "Custom 4",
-    }
-  }
+  },
 }
-NOTE_NAME = %w(C C# D D# E F F# G G# A A# B)
 
-def parse_note(s)
-  return nil if s.nil?
+class ArticulationSetGenerator
+  NOTE_NAME = %w(C C# D D# E F F# G G# A A# B)
 
-  raise "Invalid note name: #{s}" unless s =~ /\A([ACDFG]#?|[BE])([0-9])\z/
+  def self.parse(hash)
+    new.parse(hash)
+  end
 
-  name, octave = $~.captures.yield_self {|n, o| [n, o.to_i] }
+  def parse(hash)
+    a = []
 
-  n = C4 + (12 * (octave - 4))
-  n + NOTE_NAME.index(name)
-end
+    articulation_register, type_register = hash[:Registers].map {|r| parse_register(r) }
 
-def generate_id(note_a, note_b)
-  note_a * 12 + note_b.to_i
-end
+    hash[:Articulations].each {|note_a_str, types|
+      note_a = parse_note(note_a_str)
+      types.each do |note_b_str, name|
+        note_b = parse_note(note_b_str)
 
-def generate_articulation_id(id)
-  1000 + id
-end
+        id = generate_id(note_a, note_b)
+        h = {
+          ArticulationID: id,
+          ID: generate_articulation_id(id),
+          Name: name,
+          Output: [
+            {
+              MB1: articulation_register + note_a,
+              Status: "Note ON",
+              ValueLow: 0,
+            }
+          ]
+        }
 
-INSTRUMENTS.each do |set, articulations|
-  a = []
-  articulations.each {|note_a_str, types|
-    types.each do |note_b_str, name|
-      note_a, note_b = parse_note(note_a_str), parse_note(note_b_str)
-
-      id = generate_id(note_a, note_b)
-      h = {
-        ArticulationID: id,
-        ID: generate_articulation_id(id),
-        Name: name,
-        Output: [
-          {
-            MB1: note_a,
-            Status: "Note ON",
+        if note_b
+          h[:Output] << {
+            MB1: type_register + note_b,
+            Status: "Note On",
             ValueLow: 0,
           }
-        ]
-      }
+        end
 
-      if note_b
-        h[:Output] << {
-          MB1: note_b,
-          Status: "Note On",
-          ValueLow: 0,
-        }
+        a << h
       end
+    }
 
-      a << h
-    end
-  }
-  File.write("#{__dir__}/../Synchron #{set}.json", JSON.pretty_generate(Articulations: a))
+    {Articulations: a}
+  end
+
+  def parse_register(s)
+    raise "Invalid note name: #{s}" unless s.to_s =~ /\AC([0-9])\z/
+
+    i = $~.captures[0].to_i
+    C4 + (12 * (i - 4))
+  end
+
+  def parse_note(s)
+    NOTE_NAME.index(s.to_s)
+  end
+
+  def generate_id(note_a, note_b)
+    note_a * 12 + note_b.to_i + 1
+  end
+
+  def generate_articulation_id(id)
+    1000 + id
+  end
+end
+
+INSTRUMENTS.each do |name, hash|
+  set = ArticulationSetGenerator.parse(hash)
+  File.write("#{__dir__}/../Synchron #{name}.json", JSON.pretty_generate(set))
 end

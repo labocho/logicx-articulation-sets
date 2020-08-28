@@ -1,8 +1,8 @@
 {
   "Articulations": [
     {
-      "ArticulationID": 324,
-      "ID": 1324,
+      "ArticulationID": 1,
+      "ID": 1001,
       "Name": "Staccato",
       "Output": [
         {
@@ -18,8 +18,8 @@
       ]
     },
     {
-      "ArticulationID": 325,
-      "ID": 1325,
+      "ArticulationID": 2,
+      "ID": 1002,
       "Name": "Detache",
       "Output": [
         {
@@ -35,8 +35,8 @@
       ]
     },
     {
-      "ArticulationID": 336,
-      "ID": 1336,
+      "ArticulationID": 13,
+      "ID": 1013,
       "Name": "Sustain",
       "Output": [
         {
@@ -52,8 +52,8 @@
       ]
     },
     {
-      "ArticulationID": 337,
-      "ID": 1337,
+      "ArticulationID": 14,
+      "ID": 1014,
       "Name": "Marcato (w/CC1)",
       "Output": [
         {
@@ -69,8 +69,8 @@
       ]
     },
     {
-      "ArticulationID": 338,
-      "ID": 1338,
+      "ArticulationID": 15,
+      "ID": 1015,
       "Name": "XF tremolo (w/CC20)",
       "Output": [
         {
@@ -86,8 +86,8 @@
       ]
     },
     {
-      "ArticulationID": 348,
-      "ID": 1348,
+      "ArticulationID": 25,
+      "ID": 1025,
       "Name": "Legato",
       "Output": [
         {
@@ -103,8 +103,8 @@
       ]
     },
     {
-      "ArticulationID": 349,
-      "ID": 1349,
+      "ArticulationID": 26,
+      "ID": 1026,
       "Name": "Legato-sus",
       "Output": [
         {
@@ -120,8 +120,8 @@
       ]
     },
     {
-      "ArticulationID": 360,
-      "ID": 1360,
+      "ArticulationID": 37,
+      "ID": 1037,
       "Name": "Sforzato",
       "Output": [
         {
@@ -137,8 +137,8 @@
       ]
     },
     {
-      "ArticulationID": 361,
-      "ID": 1361,
+      "ArticulationID": 38,
+      "ID": 1038,
       "Name": "Sfz XV tremolo (w/CC20)",
       "Output": [
         {
@@ -154,8 +154,8 @@
       ]
     },
     {
-      "ArticulationID": 372,
-      "ID": 1372,
+      "ArticulationID": 49,
+      "ID": 1049,
       "Name": "Tremolo",
       "Output": [
         {
@@ -171,8 +171,8 @@
       ]
     },
     {
-      "ArticulationID": 373,
-      "ID": 1373,
+      "ArticulationID": 50,
+      "ID": 1050,
       "Name": "Trem. marcato (w/CC1)",
       "Output": [
         {
@@ -188,8 +188,8 @@
       ]
     },
     {
-      "ArticulationID": 348,
-      "ID": 1348,
+      "ArticulationID": 61,
+      "ID": 1061,
       "Name": "Pizzicato",
       "Output": [
         {
@@ -200,8 +200,8 @@
       ]
     },
     {
-      "ArticulationID": 396,
-      "ID": 1396,
+      "ArticulationID": 73,
+      "ID": 1073,
       "Name": "Custom 1",
       "Output": [
         {
@@ -217,8 +217,8 @@
       ]
     },
     {
-      "ArticulationID": 397,
-      "ID": 1397,
+      "ArticulationID": 74,
+      "ID": 1074,
       "Name": "Custom 2",
       "Output": [
         {
@@ -234,8 +234,8 @@
       ]
     },
     {
-      "ArticulationID": 398,
-      "ID": 1398,
+      "ArticulationID": 75,
+      "ID": 1075,
       "Name": "Custom 3",
       "Output": [
         {
@@ -251,8 +251,8 @@
       ]
     },
     {
-      "ArticulationID": 399,
-      "ID": 1399,
+      "ArticulationID": 76,
+      "ID": 1076,
       "Name": "Custom 4",
       "Output": [
         {
