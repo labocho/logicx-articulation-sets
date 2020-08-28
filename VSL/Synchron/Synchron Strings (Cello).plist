@@ -11,7 +11,7 @@
           "ValueLow": 0
         },
         {
-          "MB1": 36,
+          "MB1": 96,
           "Status": "Note On",
           "ValueLow": 0
         }
@@ -28,7 +28,7 @@
           "ValueLow": 0
         },
         {
-          "MB1": 37,
+          "MB1": 97,
           "Status": "Note On",
           "ValueLow": 0
         }
@@ -45,7 +45,7 @@
           "ValueLow": 0
         },
         {
-          "MB1": 36,
+          "MB1": 96,
           "Status": "Note On",
           "ValueLow": 0
         }
@@ -62,7 +62,7 @@
           "ValueLow": 0
         },
         {
-          "MB1": 37,
+          "MB1": 97,
           "Status": "Note On",
           "ValueLow": 0
         }
@@ -79,7 +79,7 @@
           "ValueLow": 0
         },
         {
-          "MB1": 38,
+          "MB1": 98,
           "Status": "Note On",
           "ValueLow": 0
         }
@@ -96,7 +96,7 @@
           "ValueLow": 0
         },
         {
-          "MB1": 36,
+          "MB1": 96,
           "Status": "Note On",
           "ValueLow": 0
         }
@@ -105,7 +105,7 @@
     {
       "ArticulationID": 26,
       "ID": 1026,
-      "Name": "Legato-sus",
+      "Name": "Portamento",
       "Output": [
         {
           "MB1": 26,
@@ -113,7 +113,7 @@
           "ValueLow": 0
         },
         {
-          "MB1": 37,
+          "MB1": 97,
           "Status": "Note On",
           "ValueLow": 0
         }
@@ -130,7 +130,7 @@
           "ValueLow": 0
         },
         {
-          "MB1": 36,
+          "MB1": 96,
           "Status": "Note On",
           "ValueLow": 0
         }
@@ -147,7 +147,7 @@
           "ValueLow": 0
         },
         {
-          "MB1": 37,
+          "MB1": 97,
           "Status": "Note On",
           "ValueLow": 0
         }
@@ -164,7 +164,7 @@
           "ValueLow": 0
         },
         {
-          "MB1": 36,
+          "MB1": 96,
           "Status": "Note On",
           "ValueLow": 0
         }
@@ -181,7 +181,7 @@
           "ValueLow": 0
         },
         {
-          "MB1": 37,
+          "MB1": 97,
           "Status": "Note On",
           "ValueLow": 0
         }
@@ -210,7 +210,7 @@
           "ValueLow": 0
         },
         {
-          "MB1": 36,
+          "MB1": 96,
           "Status": "Note On",
           "ValueLow": 0
         }
@@ -227,7 +227,7 @@
           "ValueLow": 0
         },
         {
-          "MB1": 37,
+          "MB1": 97,
           "Status": "Note On",
           "ValueLow": 0
         }
@@ -244,7 +244,7 @@
           "ValueLow": 0
         },
         {
-          "MB1": 38,
+          "MB1": 98,
           "Status": "Note On",
           "ValueLow": 0
         }
@@ -261,7 +261,7 @@
           "ValueLow": 0
         },
         {
-          "MB1": 39,
+          "MB1": 99,
           "Status": "Note On",
           "ValueLow": 0
         }

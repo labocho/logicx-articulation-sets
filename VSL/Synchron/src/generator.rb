@@ -72,5 +72,5 @@ end
 ARGV.each do |yaml|
   name = File.basename(yaml).gsub(File.extname(yaml), "")
   set = ArticulationSetGenerator.parse(YAML.load_file(yaml))
-  File.write("#{__dir__}/../#{name}.json", JSON.pretty_generate(set))
+  File.write("#{__dir__}/../#{name}.plist", JSON.pretty_generate(set))
 end

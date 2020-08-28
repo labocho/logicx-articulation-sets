@@ -1,0 +1,19 @@
+Registers:
+  - C6
+  - C7
+Articulations:
+  C:
+    null: Staccato
+  C#:
+    C: Sustain
+    C#: Marcato (w/CC1)
+  D:
+    C: Legato
+    C#: Legato-sus
+  D#:
+    null: Sforzato
+  E:
+    C: Custom 1
+    C#: Custom 2
+    D: Custom 3
+    D#: Custom 4
