@@ -1,0 +1,271 @@
+{
+  "Articulations": [
+    {
+      "ArticulationID": 324,
+      "ID": 1324,
+      "Name": "Staccato",
+      "Output": [
+        {
+          "MB1": 24,
+          "Status": "Note ON",
+          "ValueLow": 0
+        },
+        {
+          "MB1": 36,
+          "Status": "Note On",
+          "ValueLow": 0
+        }
+      ]
+    },
+    {
+      "ArticulationID": 325,
+      "ID": 1325,
+      "Name": "Detache",
+      "Output": [
+        {
+          "MB1": 24,
+          "Status": "Note ON",
+          "ValueLow": 0
+        },
+        {
+          "MB1": 37,
+          "Status": "Note On",
+          "ValueLow": 0
+        }
+      ]
+    },
+    {
+      "ArticulationID": 336,
+      "ID": 1336,
+      "Name": "Sustain",
+      "Output": [
+        {
+          "MB1": 25,
+          "Status": "Note ON",
+          "ValueLow": 0
+        },
+        {
+          "MB1": 36,
+          "Status": "Note On",
+          "ValueLow": 0
+        }
+      ]
+    },
+    {
+      "ArticulationID": 337,
+      "ID": 1337,
+      "Name": "Marcato (w/CC1)",
+      "Output": [
+        {
+          "MB1": 25,
+          "Status": "Note ON",
+          "ValueLow": 0
+        },
+        {
+          "MB1": 37,
+          "Status": "Note On",
+          "ValueLow": 0
+        }
+      ]
+    },
+    {
+      "ArticulationID": 338,
+      "ID": 1338,
+      "Name": "XF tremolo (w/CC20)",
+      "Output": [
+        {
+          "MB1": 25,
+          "Status": "Note ON",
+          "ValueLow": 0
+        },
+        {
+          "MB1": 38,
+          "Status": "Note On",
+          "ValueLow": 0
+        }
+      ]
+    },
+    {
+      "ArticulationID": 348,
+      "ID": 1348,
+      "Name": "Legato",
+      "Output": [
+        {
+          "MB1": 26,
+          "Status": "Note ON",
+          "ValueLow": 0
+        },
+        {
+          "MB1": 36,
+          "Status": "Note On",
+          "ValueLow": 0
+        }
+      ]
+    },
+    {
+      "ArticulationID": 349,
+      "ID": 1349,
+      "Name": "Legato-sus",
+      "Output": [
+        {
+          "MB1": 26,
+          "Status": "Note ON",
+          "ValueLow": 0
+        },
+        {
+          "MB1": 37,
+          "Status": "Note On",
+          "ValueLow": 0
+        }
+      ]
+    },
+    {
+      "ArticulationID": 360,
+      "ID": 1360,
+      "Name": "Sforzato",
+      "Output": [
+        {
+          "MB1": 27,
+          "Status": "Note ON",
+          "ValueLow": 0
+        },
+        {
+          "MB1": 36,
+          "Status": "Note On",
+          "ValueLow": 0
+        }
+      ]
+    },
+    {
+      "ArticulationID": 361,
+      "ID": 1361,
+      "Name": "Sfz XV tremolo (w/CC20)",
+      "Output": [
+        {
+          "MB1": 27,
+          "Status": "Note ON",
+          "ValueLow": 0
+        },
+        {
+          "MB1": 37,
+          "Status": "Note On",
+          "ValueLow": 0
+        }
+      ]
+    },
+    {
+      "ArticulationID": 372,
+      "ID": 1372,
+      "Name": "Tremolo",
+      "Output": [
+        {
+          "MB1": 28,
+          "Status": "Note ON",
+          "ValueLow": 0
+        },
+        {
+          "MB1": 36,
+          "Status": "Note On",
+          "ValueLow": 0
+        }
+      ]
+    },
+    {
+      "ArticulationID": 373,
+      "ID": 1373,
+      "Name": "Trem. marcato (w/CC1)",
+      "Output": [
+        {
+          "MB1": 28,
+          "Status": "Note ON",
+          "ValueLow": 0
+        },
+        {
+          "MB1": 37,
+          "Status": "Note On",
+          "ValueLow": 0
+        }
+      ]
+    },
+    {
+      "ArticulationID": 348,
+      "ID": 1348,
+      "Name": "Pizzicato",
+      "Output": [
+        {
+          "MB1": 29,
+          "Status": "Note ON",
+          "ValueLow": 0
+        }
+      ]
+    },
+    {
+      "ArticulationID": 396,
+      "ID": 1396,
+      "Name": "Custom 1",
+      "Output": [
+        {
+          "MB1": 30,
+          "Status": "Note ON",
+          "ValueLow": 0
+        },
+        {
+          "MB1": 36,
+          "Status": "Note On",
+          "ValueLow": 0
+        }
+      ]
+    },
+    {
+      "ArticulationID": 397,
+      "ID": 1397,
+      "Name": "Custom 2",
+      "Output": [
+        {
+          "MB1": 30,
+          "Status": "Note ON",
+          "ValueLow": 0
+        },
+        {
+          "MB1": 37,
+          "Status": "Note On",
+          "ValueLow": 0
+        }
+      ]
+    },
+    {
+      "ArticulationID": 398,
+      "ID": 1398,
+      "Name": "Custom 3",
+      "Output": [
+        {
+          "MB1": 30,
+          "Status": "Note ON",
+          "ValueLow": 0
+        },
+        {
+          "MB1": 38,
+          "Status": "Note On",
+          "ValueLow": 0
+        }
+      ]
+    },
+    {
+      "ArticulationID": 399,
+      "ID": 1399,
+      "Name": "Custom 4",
+      "Output": [
+        {
+          "MB1": 30,
+          "Status": "Note ON",
+          "ValueLow": 0
+        },
+        {
+          "MB1": 39,
+          "Status": "Note On",
+          "ValueLow": 0
+        }
+      ]
+    }
+  ]
+}
