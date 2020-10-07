@@ -6,6 +6,33 @@
 	<array>
 		<dict>
 			<key>ArticulationID</key>
+			<integer>0</integer>
+			<key>ID</key>
+			<integer>0</integer>
+			<key>Name</key>
+			<string>(default)</string>
+			<key>Output</key>
+			<array>
+				<dict>
+					<key>MB1</key>
+					<integer>25</integer>
+					<key>Status</key>
+					<string>Note ON</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>MB1</key>
+					<integer>96</integer>
+					<key>Status</key>
+					<string>Note On</string>
+					<key>ValueLow</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>ArticulationID</key>
 			<integer>1</integer>
 			<key>ID</key>
 			<integer>1001</integer>

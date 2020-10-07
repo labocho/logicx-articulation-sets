@@ -58,6 +58,10 @@ class ArticulationSetGenerator
       end
     }
 
+    if (default = hash["Default"])
+      a.unshift(a.find {|a| a[:Name] == default }.merge(Name: "(default)", ID: 0, ArticulationID: 0))
+    end
+
     {
       Articulations: a,
       MultipleOutputsActive: true,
