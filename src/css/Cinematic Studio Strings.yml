@@ -1,0 +1,20 @@
+Registers:
+  - C1
+Articulations:
+  C:
+    null: Sustain
+  C#:
+    null: Tremolo
+  D:
+    null: MeasuredTrem
+  D#:
+    null: Trills
+  E:
+    null: Harmonic
+  F:
+    null: Staccato
+  F#:
+    null: Marcato
+  G:
+    null: Pizzicato
+Default: Sustain

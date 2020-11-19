@@ -1,6 +1,26 @@
 require "shellwords"
 INSTALL_DIR = "#{ENV["HOME"]}/Music/Audio Music Apps/Articulation Settings"
 
+namespace :css do
+  task :clean do
+    rm_rf "build/css"
+  end
+
+  task :generate do
+    sh "ruby src/css/generator.rb src/css/*.yml"
+  end
+
+  task :install do
+    dir = File.join(INSTALL_DIR, "Cinematic Studio Series")
+    mkdir_p dir
+    sh "cp build/css/*.plist #{dir.shellescape}"
+  end
+
+  task :clean do
+    rm_rf "build/css"
+  end
+end
+
 namespace :vsl do
   namespace :synchron do
     task :clean do
